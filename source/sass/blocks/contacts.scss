@@ -1,0 +1,39 @@
+.contacts {
+  position: relative;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: $base-primary;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+.contacts__wrap {
+  margin: 0;
+  padding: 20px;
+  border-top: solid 2px $base-secondary;
+}
+.contacts__title {
+  margin: 0;
+  padding: 0;
+}
+.contacts__address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-black;
+  max-width: 260px;
+  margin: 0;
+  padding: 20px 0 16px 0;
+}
+
+.contacts__tel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-black;
+  text-decoration: none;
+}

@@ -1,0 +1,43 @@
+.catalog {
+  margin: 0 auto;
+  padding: 0;
+  background-color: $grey;
+}
+
+.catalog__wrap {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.catalog__pogination {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $base-primary;
+}
+
+.catalog__pogination-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 40px 0 44px 0;
+}
+
+.catalog__pogination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.catalog__pogination-link {
+  color: $base-primary;
+  text-decoration: none;
+}

@@ -1,7 +1,51 @@
 .main-header {
-  // background-color: #999999;
-  font-family: "Montserrat";
-  font-size: 20px;
-  color: #ffffff;
-  padding: 10px 15px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-header__wrap {
+  display: grid;
+  grid-template-areas: "logo btn btn" "nav nav nav";
+  margin: 0;
+  padding: 0;
+}
+
+.main-header__logo {
+  grid-area: logo;
+  padding: 12px 60px 12px 20px;
+}
+
+.main-header__logo-wrap {
+  height: 36px;
+}
+
+.main-header__nav {
+  grid-area: nav;
+}
+
+.main-header__btns {
+  grid-area: btn;
+  justify-self: end;
+  padding: 12px 20px 12px 20px;
+}
+
+.main-header__btn {
+  background-color: #fff;
+  border: none;
+}
+
+.main-header__toggle {
+  background-color: #fff;
+  border: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 1px;
+    position: relative;
+    top: 2px;
+    background-color: $base-black;
+    box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
+  }
 }

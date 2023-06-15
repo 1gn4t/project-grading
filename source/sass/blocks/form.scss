@@ -1,0 +1,181 @@
+.form {
+  margin: 0 auto;
+  // max-width: 320px;
+}
+
+.form__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-black;
+}
+
+.form__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: $base-black;
+  margin: 0;
+  padding: 70px 0 20px 0;
+
+  &::before {
+    content: "Каталог";
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7859cf;
+    margin: 0 auto;
+    width: 65px;
+    height: 16px;
+    display: block;
+    position: relative;
+    top: -4px;
+  }
+}
+
+.form-price {
+  max-width: 230px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-price__title {
+}
+
+.form-price__range {
+}
+
+.form-milk {
+  max-width: 230px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-milk__title {
+  padding: 30px 0 0 0;
+}
+
+.form-milk__list {
+  font-weight: 400;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-milk__item {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+.form-milk__radio {
+  display: none;
+}
+
+.form-milk__radio:checked ~ .form-milk__item-text::before {
+  background: radial-gradient(
+    $base-primary,
+    50%,
+    $base-primary,
+    40%,
+    transparent
+  );
+  border: solid 2px $base-primary;
+}
+
+.form-milk__item-text {
+  padding-left: 10px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    right: 10px;
+    top: 8px;
+    border: solid 2px $base-grey;
+    border-radius: 50%;
+  }
+}
+
+.form-country {
+  max-width: 230px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-country__title {
+  padding: 34px 0 0 0;
+}
+
+.form-country__list {
+  font-weight: 400;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-country__item {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+.form-country__flag {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  left: 0px;
+  top: 5px;
+  background-color: $base-grey;
+  border-radius: 12px;
+  margin: 0 10px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+}
+
+.form-country__checkbox {
+  display: none;
+}
+
+.form-country__checkbox:checked ~ .form-country__flag {
+  background-color: $base-primary;
+}
+
+.form-country__checkbox:checked ~ .form-country__flag::before {
+  left: 20px;
+  transition: 0.3s;
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0 36px 0;
+}

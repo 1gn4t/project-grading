@@ -1,0 +1,92 @@
+.slider {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.slider__wrap {
+  background-color: $flat-white;
+  margin: 0;
+  padding: 0 20px;
+}
+.slider__info {
+}
+
+.slider__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: $base-black;
+  margin: 0;
+  padding: 30px 0px 10px 0px;
+
+  &::before {
+    content: "Новинка!";
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7859cf;
+    margin: 0 auto;
+    width: 74px;
+    height: 16px;
+    display: block;
+    position: relative;
+    top: -4px;
+  }
+}
+
+.slider__text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $base-black;
+  margin: 0;
+  padding: 0;
+}
+
+.slider__price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $base-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 60px 0px;
+}
+
+.slider__price-old {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration-line: line-through;
+  color: $base-primary;
+  padding-right: 6px;
+}
+
+.slider__price-sale {
+  padding-right: 20px;
+}
+
+.slider__price-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  background-color: $base-primary;
+  color: $white;
+  padding: 8px 20px;
+  border-radius: 4px;
+}

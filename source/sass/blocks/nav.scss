@@ -1,0 +1,27 @@
+.main-nav__list {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 2px $base-secondary;
+}
+
+.main-nav__item {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+  border-top: solid 2px $base-secondary;
+}
+
+.main-nav__link {
+  color: $base-black;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}

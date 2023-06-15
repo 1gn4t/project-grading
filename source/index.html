@@ -26,7 +26,7 @@
           </div>
         </div>
         <!-- Навигация с ссылками -->
-        <nav class="main-nav">
+        <nav class="main-header__nav main-nav">
           <div class="main-nav-wrap">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -124,8 +124,8 @@
         <div class="catalog__wrap">
           <!-- Форма -->
           <form class="form" action="">
+            <h2 class="form__title">Каталог кофейных напитков</h2>
             <div class="form__wrap">
-              <h2 class="form__title">Каталог кофейных напитков</h2>
               <!-- Фильтр цены -->
               <fieldset class="form-price">
                 <legend class="form-price__title">Цена</legend>
@@ -139,26 +139,44 @@
                 <ul class="form-milk__list">
                   <li class="form-milk__item">
                     <label>
-                      <input type="radio" name="Неважно" />
-                      <span>Неважно</span>
+                      <input
+                        class="form-milk__radio"
+                        type="radio"
+                        name="Неважно"
+                      />
+                      <span class="form-milk__item-text">Неважно</span>
                     </label>
                   </li>
                   <li class="form-milk__item">
                     <label>
-                      <input type="radio" name="Только животное" />
-                      <span>Только животное</span>
+                      <input
+                        class="form-milk__radio"
+                        type="radio"
+                        name="Только животное"
+                      />
+                      <span class="form-milk__item-text">Только животное</span>
                     </label>
                   </li>
                   <li class="form-milk__item">
                     <label>
-                      <input type="radio" name="Только растительное" />
-                      <span>Только растительное</span>
+                      <input
+                        class="form-milk__radio"
+                        type="radio"
+                        name="Только растительное"
+                      />
+                      <span class="form-milk__item-text"
+                        >Только растительное</span
+                      >
                     </label>
                   </li>
                   <li class="form-milk__item">
                     <label>
-                      <input type="radio" name="Без молока" />
-                      <span>Без молока</span>
+                      <input
+                        class="form-milk__radio"
+                        type="radio"
+                        name="Без молока"
+                      />
+                      <span class="form-milk__item-text">Без молока</span>
                     </label>
                   </li>
                 </ul>
@@ -171,31 +189,56 @@
                 <ul class="form-country__list">
                   <li class="form-country__item">
                     <label>
-                      <input type="checkbox" name="Бразилия" />
+                      <input
+                        class="form-country__checkbox"
+                        type="checkbox"
+                        name="Бразилия"
+                      />
+                      <div class="form-country__flag"></div>
                       <span>Бразилия</span>
                     </label>
                   </li>
                   <li class="form-country__item">
                     <label>
-                      <input type="checkbox" name="Эфиопия" />
+                      <input
+                        class="form-country__checkbox"
+                        type="checkbox"
+                        name="Эфиопия"
+                      />
+                      <div class="form-country__flag"></div>
                       <span>Эфиопия</span>
                     </label>
                   </li>
                   <li class="form-country__item">
                     <label>
-                      <input type="checkbox" name="Колумбия" />
+                      <input
+                        class="form-country__checkbox"
+                        type="checkbox"
+                        name="Колумбия"
+                      />
+                      <div class="form-country__flag"></div>
                       <span>Колумбия</span>
                     </label>
                   </li>
                   <li class="form-country__item">
                     <label>
-                      <input type="checkbox" name="Коста-Рика" />
+                      <input
+                        class="form-country__checkbox"
+                        type="checkbox"
+                        name="Коста-Рика"
+                      />
+                      <div class="form-country__flag"></div>
                       <span>Коста-Рика</span>
                     </label>
                   </li>
                   <li class="form-country__item">
                     <label>
-                      <input type="checkbox" name="Перу" />
+                      <input
+                        class="form-country__checkbox"
+                        type="checkbox"
+                        name="Перу"
+                      />
+                      <div class="form-country__flag"></div>
                       <span>Перу</span>
                     </label>
                   </li>
@@ -208,12 +251,13 @@
               </div>
             </div>
           </form>
+          <!-- Карточки продукта -->
           <section class="product">
             <div class="product__wrap">
-              <div class="sort">
-                <form class="sort__form">
-                  <span class="sort__title">Сортировка</span>
-                  <select name="Сортировка">
+              <div class="product__sort">
+                <form class="product__sort-form">
+                  <span class="product__sort-title">Сортировка</span>
+                  <select class="product__sort-select" name="Сортировка">
                     <option value="по умолчанию">по умолчанию</option>
                     <option value="сначала дорогие">сначала дорогие</option>
                     <option value="сначала дешёвые">сначала дешёвые</option>
@@ -345,20 +389,18 @@
     </main>
     <!-- Подвал -->
     <footer class="main-footer">
-      <div class="main-footer__wrap">
-        <div class="main-footer__logo">
-          <div class="main-footer__logo-wrap">
-            <a href="" class="main-footer__logo-icon">
-              <picture>
-                <img
-                  src="./img/logo/mobile-logo.svg"
-                  alt="Drink2Go"
-                  width="32"
-                  height="36"
-                />
-              </picture>
-            </a>
-          </div>
+      <div class="main-footer__logo">
+        <div class="main-footer__logo-wrap">
+          <a href="" class="main-footer__logo-icon">
+            <picture>
+              <img
+                src="./img/logo/tablet-logo.svg"
+                alt="Drink2Go"
+                width="82"
+                height="36"
+              />
+            </picture>
+          </a>
         </div>
         <section class="social">
           <div class="social__wrap">
@@ -387,6 +429,8 @@
             </ul>
           </div>
         </section>
+      </div>
+      <div class="main-footer__wrap">
         <section class="e-shop">
           <div class="e-shop__wrap">
             <h4 class="e-shop__title">Интернет-магазин</h4>
@@ -407,28 +451,30 @@
           </div>
         </section>
         <section class="media">
-          <div class="e-media__wrap">
-            <h4 class="e-media__title">Медиа</h4>
-            <ul class="e-media__list">
-              <li class="e-media__item">
-                <a href="" class="e-media__link">Блог</a>
+          <div class="media__wrap">
+            <h4 class="media__title">Медиа</h4>
+            <ul class="media__list">
+              <li class="media__item">
+                <a href="" class="media__link">Блог</a>
               </li>
-              <li class="e-media__item">
-                <a href="" class="e-media__link">Информация для СМИ</a>
+              <li class="media__item">
+                <a href="" class="media__link">Информация для СМИ</a>
               </li>
-              <li class="e-media__item">
-                <a href="" class="e-media__link">Правовая информация</a>
+              <li class="media__item">
+                <a href="" class="media__link">Правовая информация</a>
               </li>
             </ul>
           </div>
         </section>
         <section class="contacts">
           <div class="contacts__wrap">
-            <h4 class="contacts__title">Медиа</h4>
+            <h4 class="contacts__title">Контакты</h4>
             <p class="contacts__address">
               Санкт-Петербург, набережная реки Карповки, дом 5
             </p>
-            <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+            <a class="contacts__tel" href="tel:+79999999999"
+              >+7 (999) 999-99-99</a
+            >
           </div>
         </section>
       </div>
