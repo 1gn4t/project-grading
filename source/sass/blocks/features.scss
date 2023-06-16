@@ -60,6 +60,34 @@
   margin: 0;
   padding: 0;
   min-height: 142px;
+
+  &--speed {
+    background-image: url(../../img/features/speed.svg);
+    background-repeat: no-repeat;
+    background-size: 52px 56px;
+    background-position: center top;
+  }
+
+  &--fit {
+    background-image: url(../../img/features/fit.svg);
+    background-repeat: no-repeat;
+    background-size: 52px 56px;
+    background-position: center top;
+  }
+
+  &--energy {
+    background-image: url(../../img/features/energy.svg);
+    background-repeat: no-repeat;
+    background-size: 52px 56px;
+    background-position: center top;
+  }
+
+  &--eco {
+    background-image: url(../../img/features/eco.svg);
+    background-repeat: no-repeat;
+    background-size: 52px 56px;
+    background-position: center top;
+  }
 }
 
 .features__item-title {

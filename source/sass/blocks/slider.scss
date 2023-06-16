@@ -4,10 +4,23 @@
 }
 
 .slider__wrap {
+  display: flex;
+  flex-direction: column;
   background-color: $flat-white;
   margin: 0;
   padding: 0 20px;
 }
+
+.slider__imgs {
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+.slider__img {
+}
+
 .slider__info {
 }
 
@@ -20,7 +33,7 @@
   text-align: center;
   color: $base-black;
   margin: 0;
-  padding: 30px 0px 10px 0px;
+  padding: 10px 0px;
 
   &::before {
     content: "Новинка!";
@@ -80,13 +93,4 @@
 }
 
 .slider__price-link {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none;
-  background-color: $base-primary;
-  color: $white;
-  padding: 8px 20px;
-  border-radius: 4px;
 }

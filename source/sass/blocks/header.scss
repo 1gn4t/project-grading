@@ -24,18 +24,22 @@
 }
 
 .main-header__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: btn;
   justify-self: end;
   padding: 12px 20px 12px 20px;
 }
 
 .main-header__btn {
-  background-color: #fff;
+  background-color: $white;
   border: none;
+  padding: 10px 22px;
 }
 
 .main-header__toggle {
-  background-color: #fff;
+  background-color: $white;
   border: none;
 
   &::before {
@@ -44,7 +48,7 @@
     width: 16px;
     height: 1px;
     position: relative;
-    top: 2px;
+    top: -5px;
     background-color: $base-black;
     box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
   }
