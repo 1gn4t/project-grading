@@ -13,11 +13,35 @@
   padding: 0;
 }
 .social__item {
-  width: 40px;
-  height: 40px;
-  // background-color: $base-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .social__link {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  &:focus {
+    background-color: $base-secondary;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+
+  &:hover .social__icon {
+    fill: $base-primary;
+  }
 }
+
 .social__icon {
+  fill: $base-grey;
 }

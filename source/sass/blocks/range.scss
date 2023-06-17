@@ -1,0 +1,79 @@
+.range__slider {
+  height: 2px;
+  width: 100%;
+  position: relative;
+  background-color: $light-grey;
+  border-radius: 2px;
+}
+
+.range__selected {
+  height: 4px;
+  width: 241px;
+  left: 1%;
+  right: 30%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: $base-lighter;
+}
+
+.range__input {
+  position: relative;
+  padding: 0 0 34px 0;
+}
+
+.range__input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7px;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+}
+.range__input input::-webkit-slider-thumb {
+  position: relative;
+  top: 2px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 2px solid $base-lighter;
+  background-color: $white;
+  pointer-events: auto;
+  appearance: none;
+}
+.range__input input::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 2px solid $base-lighter;
+  background-color: $white;
+  pointer-events: auto;
+  appearance: none;
+}
+.range__price {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+    left: 48.57%;
+  }
+}
+.range__price label {
+  margin: 0 5px 0 0;
+}
+.range__price input {
+  width: 98px;
+  padding: 8px 10px;
+  text-align: center;
+  border: solid 2px $base-lighter;
+  border-radius: 4px;
+}

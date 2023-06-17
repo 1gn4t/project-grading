@@ -20,6 +20,15 @@
   margin: 0;
   padding: 0;
 }
+
+.contacts__address-wrap {
+  display: flex;
+}
+
+.contacts__address-icon {
+  padding: 22px 6px 0 0;
+}
+
 .contacts__address {
   font-weight: 400;
   font-size: 14px;
@@ -30,10 +39,20 @@
   padding: 20px 0 16px 0;
 }
 
+.contacts__tel-wrap {
+  display: flex;
+  align-items: center;
+}
+
 .contacts__tel {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: $base-black;
   text-decoration: none;
+}
+
+.contacts__tel-icon {
+  margin: 0;
+  padding: 0 6px 0 0;
 }

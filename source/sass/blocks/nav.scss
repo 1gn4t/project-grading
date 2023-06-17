@@ -9,6 +9,11 @@
   margin: 0;
   padding: 0;
   border-bottom: solid 2px $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    border-bottom: none;
+  }
 }
 
 .main-nav__item {
@@ -16,6 +21,11 @@
   margin: 0 auto;
   padding: 20px 0px 20px 0px;
   border-top: solid 2px $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+    border-top: none;
+  }
 }
 
 .main-nav__link {

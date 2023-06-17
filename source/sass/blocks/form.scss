@@ -24,7 +24,7 @@
   text-align: center;
   color: $base-black;
   margin: 0;
-  padding: 70px 0 20px 0;
+  padding: 70px 0 0 0;
 
   &::before {
     content: "Каталог";
@@ -46,18 +46,15 @@
 }
 
 .form-price {
-  max-width: 230px;
+  min-width: 280px;
   margin: 0;
   padding: 0;
   border: none;
 }
 
 .form-price__title {
-}
-
-.form-price__range {
-  display: block;
-  height: 40px;
+  margin: 0;
+  padding: 20px 0 30px 0;
 }
 
 .form-milk {
@@ -68,7 +65,7 @@
 }
 
 .form-milk__title {
-  padding: 30px 0 0 0;
+  padding: 0;
 }
 
 .form-milk__list {
@@ -81,6 +78,43 @@
 .form-milk__item {
   margin: 0;
   padding: 20px 0 0 0;
+
+  &--disabled {
+    color: $base-grey;
+    pointer-events: none;
+
+    &:checked {
+      background: radial-gradient(
+        $primary-opacity,
+        50%,
+        $primary-opacity,
+        40%,
+        transparent
+      );
+    }
+  }
+
+  &:hover .form-milk__item-text::before {
+    background: radial-gradient(
+      $primary-opacity,
+      50%,
+      $primary-opacity,
+      40%,
+      transparent
+    );
+    border: solid 2px $base-primary;
+  }
+
+  &:hover .form-milk__item-text::before {
+    background: radial-gradient(
+      $primary-opacity,
+      50%,
+      $primary-opacity,
+      40%,
+      transparent
+    );
+    border: solid 2px $base-primary;
+  }
 }
 
 .form-milk__radio {
@@ -121,7 +155,7 @@
 }
 
 .form-country__title {
-  padding: 34px 0 0 0;
+  padding: 0;
 }
 
 .form-country__list {
@@ -134,6 +168,19 @@
 .form-country__item {
   margin: 0;
   padding: 20px 0 0 0;
+
+  &:hover .form-country__flag {
+    background-color: $primary-opacity;
+    outline: solid 2px $base-lighter;
+  }
+
+  &--disabled {
+    pointer-events: none;
+
+    .form-country__flag {
+      background-color: $light-grey;
+    }
+  }
 }
 
 .form-country__flag {
@@ -179,5 +226,5 @@
   gap: 30px;
   width: 100%;
   margin: 0 auto;
-  padding: 30px 0 36px 0;
+  padding: 0 0 36px 0;
 }

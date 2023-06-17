@@ -15,6 +15,11 @@
           <div class="main-header__logo-wrap">
             <a href="" class="main-header__logo-icon">
               <picture>
+                <source
+                  media="(min-width:768px)"
+                  srcset="./img/logo/tablet-logo.svg"
+                  width="82"
+                />
                 <img
                   src="./img/logo/mobile-logo.svg"
                   alt="Drink2Go"
@@ -183,9 +188,35 @@
               <!-- Фильтр цены -->
               <fieldset class="form-price">
                 <legend class="form-price__title">Цена</legend>
-                <div class="form-price__range"></div>
-                <input type="number" name="" id="" />
-                <input type="number" name="" id="" />
+                <div class="form-price__range range">
+                  <div class="range__slider">
+                    <span class="range__selected"></span>
+                  </div>
+                  <div class="range__input">
+                    <input
+                      type="range"
+                      class="range__min"
+                      min="0"
+                      max="135"
+                      value="0"
+                      step="1"
+                      placeholder="0"
+                    />
+                    <input
+                      type="range"
+                      class="range__max"
+                      min="0"
+                      max="135"
+                      value="123"
+                      step="1"
+                      placeholder="0"
+                    />
+                  </div>
+                  <div class="range__price">
+                    <input type="number" name="min" value="0" />
+                    <input type="number" name="max" value="123" />
+                  </div>
+                </div>
               </fieldset>
               <!-- Фильтр молока -->
               <fieldset class="form-milk">
@@ -223,7 +254,7 @@
                       >
                     </label>
                   </li>
-                  <li class="form-milk__item">
+                  <li class="form-milk__item form-milk__item--disabled">
                     <label>
                       <input
                         class="form-milk__radio"
@@ -285,7 +316,7 @@
                       <span>Коста-Рика</span>
                     </label>
                   </li>
-                  <li class="form-country__item">
+                  <li class="form-country__item form-country__item--disabled">
                     <label>
                       <input
                         class="form-country__checkbox"
@@ -322,7 +353,7 @@
               <div class="product__wrap-list">
                 <ul class="product__list">
                   <li class="product__item">
-                    <picture>
+                    <picture class="product__img">
                       <source
                         type="image/webp"
                         srcset="
@@ -333,7 +364,6 @@
                         height="188"
                       />
                       <img
-                        class="product__img"
                         src="img/catalog/coffee-can-1.png"
                         srcset="img/catalog/coffee-can-1@2x.png"
                         alt=""
@@ -354,7 +384,7 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <picture>
+                    <picture class="product__img">
                       <source
                         type="image/webp"
                         srcset="
@@ -365,7 +395,6 @@
                         height="188"
                       />
                       <img
-                        class="product__img"
                         src="img/catalog/coffee-can-2.png"
                         srcset="img/catalog/coffee-can-2@2x.png"
                         alt=""
@@ -386,7 +415,7 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <picture>
+                    <picture class="product__img">
                       <source
                         type="image/webp"
                         srcset="
@@ -397,7 +426,6 @@
                         height="188"
                       />
                       <img
-                        class="product__img"
                         src="img/catalog/coffee-can-3.png"
                         srcset="img/catalog/coffee-can-3@2x.png"
                         alt=""
@@ -418,7 +446,7 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <picture>
+                    <picture class="product__img">
                       <source
                         type="image/webp"
                         srcset="
@@ -429,7 +457,6 @@
                         height="188"
                       />
                       <img
-                        class="product__img"
                         src="img/catalog/coffee-can-4.png"
                         srcset="img/catalog/coffee-can-4@2x.png"
                         alt=""
@@ -450,7 +477,7 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <picture>
+                    <picture class="product__img">
                       <source
                         type="image/webp"
                         srcset="
@@ -461,7 +488,6 @@
                         height="188"
                       />
                       <img
-                        class="product__img"
                         src="img/catalog/coffee-can-5.png"
                         srcset="img/catalog/coffee-can-5@2x.png"
                         alt=""
@@ -482,7 +508,7 @@
                     </div>
                   </li>
                   <li class="product__item">
-                    <picture>
+                    <picture class="product__img">
                       <source
                         type="image/webp"
                         srcset="
@@ -493,7 +519,6 @@
                         height="188"
                       />
                       <img
-                        class="product__img"
                         src="img/catalog/coffee-can-6.png"
                         srcset="img/catalog/coffee-can-6@2x.png"
                         alt=""
@@ -518,25 +543,51 @@
               <div class="catalog__pogination">
                 <ul class="catalog__pogination-list">
                   <li class="catalog__pogination-item">
-                    <a class="catalog__pogination-link" href="">
-                      <svg class="main-header__icon" width="20" height="20">
-                        <use href=""></use>
+                    <a
+                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
+                      href=""
+                    >
+                      <svg
+                        class="catalog__pogination-img"
+                        width="15"
+                        height="15"
+                      >
+                        <use href="img/icons/stack.svg#control-left"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="catalog__pogination-item">
-                    <a class="catalog__pogination-link" href="">1</a>
+                    <a
+                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
+                      href=""
+                      >1</a
+                    >
                   </li>
                   <li class="catalog__pogination-item">
-                    <a class="catalog__pogination-link" href="">2</a>
+                    <a
+                      class="catalog__pogination-link catalog__pogination-link--current"
+                      href=""
+                      >2</a
+                    >
                   </li>
                   <li class="catalog__pogination-item">
-                    <a class="catalog__pogination-link" href="">3</a>
+                    <a
+                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
+                      href=""
+                      >3</a
+                    >
                   </li>
                   <li class="catalog__pogination-item">
-                    <a class="catalog__pogination-link" href="">
-                      <svg class="main-header__icon" width="20" height="20">
-                        <use href=""></use>
+                    <a
+                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
+                      href=""
+                    >
+                      <svg
+                        class="catalog__pogination-img"
+                        width="15"
+                        height="15"
+                      >
+                        <use href="img/icons/stack.svg#control-right"></use>
                       </svg>
                     </a>
                   </li>
@@ -631,18 +682,22 @@
         <section class="contacts">
           <div class="contacts__wrap">
             <h4 class="contacts__title">Контакты</h4>
-            <p class="contacts__address">
-              <svg class="contacts__icon" width="20" height="20">
+            <div class="contacts__address-wrap">
+              <svg class="contacts__address-icon" width="13" height="16">
                 <use href="img/icons/stack.svg#mark"></use>
               </svg>
-              Санкт-Петербург, набережная реки Карповки, дом 5
-            </p>
-            <a class="contacts__tel" href="tel:+79999999999">
-              <svg class="contacts__icon" width="20" height="20">
+              <p class="contacts__address">
+                Санкт-Петербург, набережная реки Карповки, дом 5
+              </p>
+            </div>
+            <div class="contacts__tel-wrap">
+              <svg class="contacts__tel-icon" width="13" height="16">
                 <use href="img/icons/stack.svg#phone"></use>
               </svg>
-              +7 (999) 999-99-99</a
-            >
+              <a class="contacts__tel" href="tel:+79999999999">
+                +7 (999) 999-99-99</a
+              >
+            </div>
           </div>
         </section>
       </div>
