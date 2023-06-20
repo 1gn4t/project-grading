@@ -5,6 +5,7 @@
 
 .form__wrap {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   font-family: "Montserrat";
@@ -13,69 +14,53 @@
   font-size: 16px;
   line-height: 24px;
   color: $base-black;
-}
 
-.form__title {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-  color: $base-black;
-  margin: 0;
-  padding: 70px 0 0 0;
-
-  &::before {
-    content: "Каталог";
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #7859cf;
-    margin: 0 auto;
-    width: 65px;
-    height: 16px;
-    display: block;
-    position: relative;
-    top: -4px;
+  @media (min-width: $desktop-width) {
+    grid-area: form;
+    max-width: 318px;
   }
 }
 
-.form-price {
+.form__price {
   min-width: 280px;
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    min-width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: none;
+    width: 100%;
+  }
 }
 
-.form-price__title {
+.form__price-title {
   margin: 0;
-  padding: 20px 0 30px 0;
+  padding: 0 0 30px 0;
 }
 
-.form-milk {
+.form__milk {
   max-width: 230px;
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.form-milk__title {
+.form__milk-title {
   padding: 0;
 }
 
-.form-milk__list {
+.form__milk-list {
   font-weight: 400;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.form-milk__item {
+.form__milk-item {
   margin: 0;
   padding: 20px 0 0 0;
 
@@ -94,7 +79,7 @@
     }
   }
 
-  &:hover .form-milk__item-text::before {
+  &:hover .form__milk-item-text::before {
     background: radial-gradient(
       $primary-opacity,
       50%,
@@ -105,7 +90,7 @@
     border: solid 2px $base-primary;
   }
 
-  &:hover .form-milk__item-text::before {
+  &:hover .form__milk-item-text::before {
     background: radial-gradient(
       $primary-opacity,
       50%,
@@ -117,11 +102,11 @@
   }
 }
 
-.form-milk__radio {
+.form__milk-radio {
   display: none;
 }
 
-.form-milk__radio:checked ~ .form-milk__item-text::before {
+.form__milk-radio:checked ~ .form__milk-item-text::before {
   background: radial-gradient(
     $base-primary,
     50%,
@@ -132,7 +117,7 @@
   border: solid 2px $base-primary;
 }
 
-.form-milk__item-text {
+.form__milk-item-text {
   padding-left: 10px;
   &::before {
     content: "";
@@ -147,29 +132,29 @@
   }
 }
 
-.form-country {
+.form__country {
   max-width: 230px;
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.form-country__title {
+.form__country-title {
   padding: 0;
 }
 
-.form-country__list {
+.form__country-list {
   font-weight: 400;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.form-country__item {
+.form__country-item {
   margin: 0;
   padding: 20px 0 0 0;
 
-  &:hover .form-country__flag {
+  &:hover .form__country-flag {
     background-color: $primary-opacity;
     outline: solid 2px $base-lighter;
   }
@@ -177,13 +162,13 @@
   &--disabled {
     pointer-events: none;
 
-    .form-country__flag {
+    .form__country-flag {
       background-color: $light-grey;
     }
   }
 }
 
-.form-country__flag {
+.form__country-flag {
   position: relative;
   display: inline-block;
   width: 42px;
@@ -207,24 +192,42 @@
   }
 }
 
-.form-country__checkbox {
+.form__country-checkbox {
   display: none;
 }
 
-.form-country__checkbox:checked ~ .form-country__flag {
+.form__country-checkbox:checked ~ .form__country-flag {
   background-color: $base-primary;
 }
 
-.form-country__checkbox:checked ~ .form-country__flag::before {
+.form__country-checkbox:checked ~ .form__country-flag::before {
   left: 20px;
   transition: 0.3s;
 }
 
-.form-submit {
+.form__submit {
   display: flex;
   flex-direction: column;
   gap: 30px;
   width: 100%;
   margin: 0 auto;
   padding: 0 0 36px 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0 44px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0 44px 0;
+  }
+}
+
+.form__submit-btn {
+  @media (min-width: $tablet-width) {
+    min-width: 149px;
+  }
 }

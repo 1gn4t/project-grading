@@ -1,3 +1,18 @@
+.main-nav {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  &--nojs {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
 .main-nav__list {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -17,21 +32,37 @@
 }
 
 .main-nav__item {
-  text-align: center;
-  margin: 0 auto;
-  padding: 20px 0px 20px 0px;
-  border-top: solid 2px $base-secondary;
-
-  @media (min-width: $tablet-width) {
-    padding: 32px 20px;
-    border-top: none;
-  }
 }
 
 .main-nav__link {
+  display: block;
   color: $base-black;
   text-decoration: none;
   margin: 0;
   padding: 0;
   border-bottom: none;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+  border-top: solid 2px $base-secondary;
+
+  &--current {
+    color: $base-primary;
+    border-bottom: solid 2px $base-primary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+    border-top: none;
+  }
+
+  &:hover {
+    color: $base-primary;
+  }
+  &:focus {
+    color: $base-primary;
+  }
+  &:active {
+    background-color: $base-secondary;
+  }
 }

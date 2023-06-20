@@ -1,11 +1,25 @@
 .main-footer {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .main-footer__wrap {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    padding: 0 20px 30px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 49px 40px 20px 30px;
+  }
 }
 
 .main-footer__logo {
@@ -13,9 +27,31 @@
   justify-content: space-between;
   margin: 0;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 42px 20px 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+  }
 }
 
-.main-footer__logo-wrap {
+.main-footer__logo-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0;
+  line-height: 20px;
+  color: $base-black;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+  }
 }
 
 .main-footer__logo-icon {

@@ -7,6 +7,54 @@
 .catalog__wrap {
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 1360px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas: "title title" "form catalog";
+    column-gap: 30px;
+    padding: 0 40px;
+  }
+}
+
+.catalog__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: $base-black;
+  margin: 0;
+  padding: 70px 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: title;
+    padding: 120px 0 40px 0;
+  }
+
+  &::before {
+    content: "Каталог";
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7859cf;
+    margin: 0 auto;
+    width: 65px;
+    height: 16px;
+    display: block;
+    position: relative;
+    top: -4px;
+  }
 }
 
 .catalog__pogination {
@@ -17,6 +65,11 @@
   line-height: 24px;
   text-align: center;
   color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .catalog__pogination-list {
@@ -25,6 +78,14 @@
   list-style: none;
   margin: 0;
   padding: 40px 0 44px;
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 0 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0 120px;
+  }
 }
 
 .catalog__pogination-item {
@@ -33,6 +94,15 @@
   align-items: center;
   background-color: $white;
   border-radius: 4px;
+
+  &--control {
+    text-indent: -9999px;
+
+    @media (min-width: $tablet-width) {
+      text-indent: 0;
+      padding: 0 12px;
+    }
+  }
 }
 
 .catalog__pogination-link {
@@ -46,6 +116,17 @@
   padding: 8px;
   width: 24px;
   height: 24px;
+  border-radius: 4px;
+
+  &--control {
+    text-indent: -9999px;
+
+    @media (min-width: $tablet-width) {
+      text-indent: 0;
+      width: inherit;
+      padding: 8px 20px;
+    }
+  }
 
   &--current {
     font-weight: 600;
@@ -53,13 +134,39 @@
     line-height: 24px;
     color: $base-black;
     background-color: $grey;
+    pointer-events: none;
   }
 
   &:hover .catalog__pogination-img {
     fill: $white;
   }
+
+  &:hover {
+    background-color: $base-lighter;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $base-lighter;
+    outline: none;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $white;
+  }
 }
 
 .catalog__pogination-img {
   fill: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

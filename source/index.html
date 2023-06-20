@@ -5,6 +5,10 @@
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    /> -->
   </head>
   <body class="page__body">
     <!-- Шапка -->
@@ -15,6 +19,11 @@
           <div class="main-header__logo-wrap">
             <a href="" class="main-header__logo-icon">
               <picture>
+                <source
+                  media="(min-width:1440px)"
+                  srcset="./img/logo/desktop-logo.svg"
+                  width="170"
+                />
                 <source
                   media="(min-width:768px)"
                   srcset="./img/logo/tablet-logo.svg"
@@ -29,13 +38,18 @@
               </picture>
             </a>
           </div>
+          <p class="main-header__logo-text">
+            Интернет-магазин кофейных напитков
+          </p>
         </div>
         <!-- Навигация с ссылками -->
-        <nav class="main-header__nav main-nav">
+        <nav class="main-header__nav main-nav main-nav--nojs">
           <div class="main-nav-wrap">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="" class="main-nav__link">Главная</a>
+                <a href="" class="main-nav__link main-nav__link--current"
+                  >Главная</a
+                >
               </li>
               <li class="main-nav__item">
                 <a href="" class="main-nav__link">Каталог</a>
@@ -52,18 +66,18 @@
         <!-- Кнопки -->
         <div class="main-header__btns">
           <button class="main-header__btn">
-            <span class="visually-hidden">Войти в профиль</span>
+            Войти
             <svg class="main-header__icon" width="20" height="20">
               <use href="img/icons/stack.svg#user"></use>
             </svg>
           </button>
           <button class="main-header__btn">
-            <span class="visually-hidden">Корзина</span>
+            Корзина
             <svg class="main-header__icon" width="20" height="20">
               <use href="img/icons/stack.svg#basket"></use>
             </svg>
           </button>
-          <button class="main-header__toggle">
+          <button class="main-header__toggle main-header__toggle--nojs">
             <span class="visually-hidden">Открыть меню навигации</span>
           </button>
         </div>
@@ -72,79 +86,126 @@
     <!-- Основной блок -->
     <main>
       <!-- Слайдер -->
-      <section class="slider">
-        <div class="slider__wrap">
-          <picture class="slider__imgs">
-            <source
-              type="image/webp"
-              media="(min-width:1440px)"
-              srcset="
-                img/slider/flat_white_img@.webp,
-                img/slider/flat_white_img@2x.webp 2x
-              "
-              width="600"
-              height="600"
-            />
-            <source
-              type="image/webp"
-              media="(min-width:768px)"
-              srcset="
-                img/slider/flat_white_img@.webp,
-                img/slider/flat_white_img@2x.webp 2x
-              "
-              width="476"
-              height="476"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                img/slider/flat_white_img@.webp,
-                img/slider/flat_white_img@2x.webp 2x
-              "
-              width="280"
-              height="280"
-            />
-            <source
-              media="(min-width:1440px)"
-              srcset="
-                img/slider/flat_white_img@.png,
-                img/slider/flat_white_img@2x.png 2x
-              "
-              width="600"
-              height="600"
-            />
-            <source
-              media="(min-width:768px)"
-              srcset="
-                img/slider/flat_white_img@.png,
-                img/slider/flat_white_img@2x.png 2x
-              "
-              width="476"
-              height="476"
-            />
-            <img
-              class="slider__img"
-              src="img/slider/flat_white_img.png"
-              srcset="img/slider/flat_white_img@2x.png"
-              alt=""
-              width="280"
-              height="280"
-            />
-          </picture>
-          <div class="slider__info">
-            <h1 class="slider__title">Декаф Флэт Уайт</h1>
-            <p class="slider__text">
-              Свежесваренный кофе без кофеина из Эфиопии с натуральным
-              фермерским молоком — то, что нужно для расслабления после тяжёлого
-              рабочего дня
-            </p>
-            <div class="slider__price">
-              <span class="slider__price-old">295₽</span>
-              <span class="slider__price-sale">225₽</span>
-              <a href="" class="slider__price-link main-btn">Заказать</a>
+      <section class="slider swiper">
+        <!-- Обертка слайдера -->
+        <div class="slider__wrap swiper-wrapper">
+          <!-- слайд 1 -->
+          <div class="slider__item swiper-slide">
+            <div class="slider__item-wrap">
+              <picture class="slider__imgs">
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/slider/flat_white_img@.webp   1x,
+                    img/slider/flat_white_img@2x.webp 2x
+                  "
+                  width="280"
+                  height="280"
+                />
+                <img
+                  class="slider__img"
+                  src="img/slider/flat_white_img.png"
+                  srcset="img/slider/flat_white_img@2x.png"
+                  alt=""
+                  width="280"
+                  height="280"
+                />
+              </picture>
+              <div class="slider__info">
+                <h1 class="slider__title">Декаф Флэт Уайт</h1>
+                <p class="slider__text">
+                  Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                  фермерским молоком — то, что нужно для расслабления после
+                  тяжёлого рабочего дня
+                </p>
+                <div class="slider__price">
+                  <span class="slider__price-old">295₽</span>
+                  <span class="slider__price-sale">225₽</span>
+                  <a href="" class="slider__price-link main-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- слайд 2 -->
+          <div class="slider__item swiper-slide">
+            <div class="slider__item-wrap slider__item-wrap--lavender">
+              <picture class="slider__imgs">
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/slider/lavender_img@.webp   1x,
+                    img/slider/lavender_img@2x.webp 2x
+                  "
+                  width="280"
+                  height="280"
+                />
+                <img
+                  class="slider__img"
+                  src="img/slider/lavender_img.png"
+                  srcset="img/slider/lavender_img@2x.png"
+                  alt=""
+                  width="280"
+                  height="280"
+                />
+              </picture>
+              <div class="slider__info">
+                <h1 class="slider__title">Лавандовый Латте</h1>
+                <p class="slider__text">
+                  Невероятное сочетание перуанской высокогорной арабики с
+                  молоком ламы и лавандовым сиропом унесёт вас прямо на вершину
+                  Радужных гор
+                </p>
+                <div class="slider__price">
+                  <span class="slider__price-old">285₽</span>
+                  <span class="slider__price-sale">265₽</span>
+                  <a href="" class="slider__price-link main-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- слайд 3 -->
+          <div class="slider__item swiper-slide">
+            <div class="slider__item-wrap slider__item-wrap--espresso">
+              <picture class="slider__imgs">
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/slider/espresso_img@.webp   1x,
+                    img/slider/espresso_img@2x.webp 2x
+                  "
+                  width="280"
+                  height="280"
+                />
+                <img
+                  class="slider__img"
+                  src="img/slider/espresso_img.png"
+                  srcset="img/slider/espresso_img@2x.png"
+                  alt=""
+                  width="280"
+                  height="280"
+                />
+              </picture>
+              <div class="slider__info">
+                <h1 class="slider__title">Тройной Эспрессо</h1>
+                <p class="slider__text">
+                  Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                  тройной эспрессо из Колумбии покажет вам, что такое настоящая
+                  бодрость
+                </p>
+                <div class="slider__price">
+                  <span class="slider__price-old">395₽</span>
+                  <span class="slider__price-sale">375₽</span>
+                  <a href="" class="slider__price-link main-btn">Заказать</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- Пагинация -->
+        <div class="slider__pagination swiper-pagination"></div>
+        <!-- Кнопки слайдера -->
+        <button class="slider__btn slider__btn--prev"></button>
+        <button class="slider__btn slider__btn--next"></button>
       </section>
       <!-- Особенности -->
       <section class="features">
@@ -181,14 +242,14 @@
       <!-- Каталог -->
       <section class="catalog">
         <div class="catalog__wrap">
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <!-- Форма -->
           <form class="form" action="">
-            <h2 class="form__title">Каталог кофейных напитков</h2>
             <div class="form__wrap">
               <!-- Фильтр цены -->
-              <fieldset class="form-price">
-                <legend class="form-price__title">Цена</legend>
-                <div class="form-price__range range">
+              <fieldset class="form__price">
+                <legend class="form__price-title">Цена</legend>
+                <div class="form__price-range range">
                   <div class="range__slider">
                     <span class="range__selected"></span>
                   </div>
@@ -219,120 +280,122 @@
                 </div>
               </fieldset>
               <!-- Фильтр молока -->
-              <fieldset class="form-milk">
-                <legend class="form-milk__title">Наличие молока</legend>
-                <ul class="form-milk__list">
-                  <li class="form-milk__item">
+              <fieldset class="form__milk">
+                <legend class="form__milk-title">Наличие молока</legend>
+                <ul class="form__milk-list">
+                  <li class="form__milk-item">
                     <label>
                       <input
-                        class="form-milk__radio"
+                        class="form__milk-radio"
                         type="radio"
                         name="Неважно"
                       />
-                      <span class="form-milk__item-text">Неважно</span>
+                      <span class="form__milk-item-text">Неважно</span>
                     </label>
                   </li>
-                  <li class="form-milk__item">
+                  <li class="form__milk-item">
                     <label>
                       <input
-                        class="form-milk__radio"
+                        class="form__milk-radio"
                         type="radio"
                         name="Только животное"
                       />
-                      <span class="form-milk__item-text">Только животное</span>
+                      <span class="form__milk-item-text">Только животное</span>
                     </label>
                   </li>
-                  <li class="form-milk__item">
+                  <li class="form__milk-item">
                     <label>
                       <input
-                        class="form-milk__radio"
+                        class="form__milk-radio"
                         type="radio"
                         name="Только растительное"
                       />
-                      <span class="form-milk__item-text"
+                      <span class="form__milk-item-text"
                         >Только растительное</span
                       >
                     </label>
                   </li>
-                  <li class="form-milk__item form-milk__item--disabled">
+                  <li class="form__milk-item form__milk-item--disabled">
                     <label>
                       <input
-                        class="form-milk__radio"
+                        class="form__milk-radio"
                         type="radio"
                         name="Без молока"
                       />
-                      <span class="form-milk__item-text">Без молока</span>
+                      <span class="form__milk-item-text">Без молока</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
               <!-- Фильтр страны -->
-              <fieldset class="form-country">
-                <legend class="form-country__title">
+              <fieldset class="form__country">
+                <legend class="form__country-title">
                   Страна произрастания
                 </legend>
-                <ul class="form-country__list">
-                  <li class="form-country__item">
+                <ul class="form__country-list">
+                  <li class="form__country-item">
                     <label>
                       <input
-                        class="form-country__checkbox"
+                        class="form__country-checkbox"
                         type="checkbox"
                         name="Бразилия"
                       />
-                      <div class="form-country__flag"></div>
+                      <div class="form__country-flag"></div>
                       <span>Бразилия</span>
                     </label>
                   </li>
-                  <li class="form-country__item">
+                  <li class="form__country-item">
                     <label>
                       <input
-                        class="form-country__checkbox"
+                        class="form__country-checkbox"
                         type="checkbox"
                         name="Эфиопия"
                       />
-                      <div class="form-country__flag"></div>
+                      <div class="form__country-flag"></div>
                       <span>Эфиопия</span>
                     </label>
                   </li>
-                  <li class="form-country__item">
+                  <li class="form__country-item">
                     <label>
                       <input
-                        class="form-country__checkbox"
+                        class="form__country-checkbox"
                         type="checkbox"
                         name="Колумбия"
                       />
-                      <div class="form-country__flag"></div>
+                      <div class="form__country-flag"></div>
                       <span>Колумбия</span>
                     </label>
                   </li>
-                  <li class="form-country__item">
+                  <li class="form__country-item">
                     <label>
                       <input
-                        class="form-country__checkbox"
+                        class="form__country-checkbox"
                         type="checkbox"
                         name="Коста-Рика"
                       />
-                      <div class="form-country__flag"></div>
+                      <div class="form__country-flag"></div>
                       <span>Коста-Рика</span>
                     </label>
                   </li>
-                  <li class="form-country__item form-country__item--disabled">
+                  <li class="form__country-item form__country-item--disabled">
                     <label>
                       <input
-                        class="form-country__checkbox"
+                        class="form__country-checkbox"
                         type="checkbox"
                         name="Перу"
                       />
-                      <div class="form-country__flag"></div>
+                      <div class="form__country-flag"></div>
                       <span>Перу</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
               <!-- Кнопки формы -->
-              <div class="form-submit">
-                <button class="main-btn">Применить</button>
-                <button class="main-btn main-btn--white">Сбросить</button>
+              <div class="form__submit">
+                <button class="form__submit-btn main-btn">Применить</button>
+                <button class="form__submit-btn main-btn main-btn--white">
+                  Сбросить
+                </button>
               </div>
             </div>
           </form>
@@ -544,9 +607,9 @@
                 <ul class="catalog__pogination-list">
                   <li class="catalog__pogination-item">
                     <a
-                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
+                      class="catalog__pogination-link catalog__pogination-link--control"
                       href=""
-                    >
+                      >Назад
                       <svg
                         class="catalog__pogination-img"
                         width="15"
@@ -557,11 +620,7 @@
                     </a>
                   </li>
                   <li class="catalog__pogination-item">
-                    <a
-                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
-                      href=""
-                      >1</a
-                    >
+                    <a class="catalog__pogination-link" href="">1</a>
                   </li>
                   <li class="catalog__pogination-item">
                     <a
@@ -571,17 +630,13 @@
                     >
                   </li>
                   <li class="catalog__pogination-item">
-                    <a
-                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
-                      href=""
-                      >3</a
-                    >
+                    <a class="catalog__pogination-link" href="">3</a>
                   </li>
                   <li class="catalog__pogination-item">
                     <a
-                      class="catalog__pogination-link main-btn main-btn--white main-btn--pogination"
+                      class="catalog__pogination-link catalog__pogination-link--control"
                       href=""
-                    >
+                      >Вперёд
                       <svg
                         class="catalog__pogination-img"
                         width="15"
@@ -598,7 +653,9 @@
         </div>
       </section>
       <!-- Карта -->
-      <section class="map"></section>
+      <section class="map">
+        <div id="map"></div>
+      </section>
     </main>
     <!-- Подвал -->
     <footer class="main-footer">
@@ -606,6 +663,16 @@
         <div class="main-footer__logo-wrap">
           <a href="" class="main-footer__logo-icon">
             <picture>
+              <source
+                media="(min-width:1440px)"
+                srcset="./img/logo/desktop-logo.svg"
+                width="170"
+              />
+              <source
+                media="(min-width:768px)"
+                srcset="./img/logo/desktop-logo.svg"
+                width="170"
+              />
               <img
                 src="./img/logo/tablet-logo.svg"
                 alt="Drink2Go"
@@ -614,6 +681,9 @@
               />
             </picture>
           </a>
+          <p class="main-footer__logo-text">
+            Интернет-магазин кофейных напитков
+          </p>
         </div>
         <section class="social">
           <div class="social__wrap">
@@ -702,7 +772,7 @@
         </section>
       </div>
     </footer>
-    <!-- <script src="../vendor/nouislider.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

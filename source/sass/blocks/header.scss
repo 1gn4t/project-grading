@@ -6,8 +6,9 @@
 .main-header__wrap {
   display: grid;
   grid-template-areas: "logo btn btn" "nav nav nav";
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 1440px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -23,11 +24,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 12px 0 12px 40px;
   }
 }
 
 .main-header__logo-wrap {
   height: 36px;
+}
+
+.main-header__logo-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-black;
+  max-width: 180px;
+  padding: 0 0 0 20px;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
 }
 
 .main-header__nav {
@@ -41,30 +59,90 @@
   grid-area: btn;
   justify-self: end;
   padding: 12px 20px 12px 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 12px 40px;
+    gap: 20px;
+  }
 }
 
 .main-header__btn {
+  display: flex;
+  font-weight: 500;
+  font-size: 0;
+  line-height: 16px;
+  text-transform: uppercase;
   background-color: $white;
   border: none;
-  padding: 10px 22px;
+  padding: 0 22px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}
+
+.main-header__icon {
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0 8px 0 0;
+  }
 }
 
 .main-header__toggle {
-  background-color: $white;
+  display: block;
+  width: 16px;
+  height: 1px;
+  position: relative;
+  background-color: $base-black;
   border: none;
+  margin: 0 0 0 22px;
 
-  @media (min-width: $tablet-width) {
-    display: none;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 16px;
+    background-color: $base-black;
+    left: 0;
+    top: -5px;
+    transition: ease 0.3s all;
   }
 
   &::before {
     content: "";
-    display: block;
+    position: absolute;
+    height: 2px;
     width: 16px;
-    height: 1px;
-    position: relative;
-    top: -5px;
     background-color: $base-black;
-    box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
+    left: 0;
+    top: 6px;
+    transition: ease 0.3s all;
+  }
+
+  &--active {
+    background-color: $white;
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+      transition: ease 0.3s all;
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+      transition: ease 0.3s all;
+    }
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

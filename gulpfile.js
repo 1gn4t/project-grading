@@ -49,7 +49,18 @@ export function processScripts() {
   return gulp
     .src("source/js/script.js")
     .pipe(terser())
-    .pipe(webpack())
+    .pipe(
+      webpack({
+        module: {
+          rules: [
+            {
+              test: /\.css$/i,
+              use: ["style-loader", "css-loader"],
+            },
+          ],
+        },
+      })
+    )
     .pipe(gulp.dest("build/js"))
     .pipe(browser.stream());
 }

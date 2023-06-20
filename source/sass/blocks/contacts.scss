@@ -15,6 +15,16 @@
   margin: 0;
   padding: 20px;
   border-top: solid 2px $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-top: none;
+    max-width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 317px;
+  }
 }
 .contacts__title {
   margin: 0;
@@ -27,6 +37,10 @@
 
 .contacts__address-icon {
   padding: 22px 6px 0 0;
+
+  @media (min-width: $tablet-width) {
+    width: 25px;
+  }
 }
 
 .contacts__address {

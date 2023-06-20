@@ -6,6 +6,10 @@
 .features__wrap {
   margin: 0;
   padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
 }
 
 .features__title {
@@ -18,6 +22,16 @@
   color: $base-black;
   margin: 0;
   padding: 70px 0 36px 0;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 120px 0 80px 0;
+  }
 
   &::before {
     content: "Преимущества";
@@ -46,6 +60,15 @@
   list-style: none;
   margin: 0;
   padding: 0 0 60px 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    padding: 0 0 100px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 120px 0;
+  }
 }
 
 .features__item {
@@ -61,11 +84,34 @@
   padding: 0;
   min-height: 142px;
 
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 72px;
+    max-width: 267px;
+    min-height: 94px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    max-width: 317px;
+    min-height: 170px;
+    margin: 0;
+    padding: 0;
+  }
+
   &--speed {
     background-image: url(../../img/features/speed.svg);
     background-repeat: no-repeat;
     background-size: 52px 56px;
     background-position: center top;
+
+    @media (min-width: $tablet-width) {
+      background-position: left top;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: center top;
+    }
   }
 
   &--fit {
@@ -73,6 +119,14 @@
     background-repeat: no-repeat;
     background-size: 52px 56px;
     background-position: center top;
+
+    @media (min-width: $tablet-width) {
+      background-position: left top;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: center top;
+    }
   }
 
   &--energy {
@@ -80,6 +134,14 @@
     background-repeat: no-repeat;
     background-size: 52px 56px;
     background-position: center top;
+
+    @media (min-width: $tablet-width) {
+      background-position: left top;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: center top;
+    }
   }
 
   &--eco {
@@ -87,6 +149,14 @@
     background-repeat: no-repeat;
     background-size: 52px 56px;
     background-position: center top;
+
+    @media (min-width: $tablet-width) {
+      background-position: left top;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: center top;
+    }
   }
 }
 
@@ -96,6 +166,11 @@
   line-height: 32px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .features__item-text {
@@ -104,4 +179,10 @@
   line-height: 20px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 0 0 0;
+  }
 }
