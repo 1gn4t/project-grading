@@ -13,7 +13,7 @@
 }
 
 .product__sort {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -31,7 +31,7 @@
 }
 
 .product__sort-select {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -61,9 +61,6 @@
   padding: 0 10px 0 0;
 }
 
-.product__wrap-list {
-}
-
 .product__list {
   display: flex;
   justify-content: center;
@@ -71,7 +68,7 @@
   gap: 20px;
   list-style: none;
   margin: 0;
-  padding: 20px 0 0 0;
+  padding: 25px 0 0 0;
 
   @media (min-width: $tablet-width) {
     padding: 30px 0 0 0;
@@ -82,38 +79,52 @@
 .product__item {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 32px;
-  color: $base-black;
   background-color: $white;
   max-width: 240px;
   margin: 0;
   padding: 20px;
+  border-radius: 4px;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 
   @media (min-width: $tablet-width) {
     max-width: 289px;
     padding: 30px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     max-width: 257px;
   }
 }
 
+.product__link {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: $base-black;
+  text-decoration: none;
+}
+
 .product__img {
+  display: block;
   align-self: center;
   margin: 0;
-  padding: 40px 55px 24px;
+  padding: 20px 55px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 80px 30px;
+    padding: 18px 80px 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 65px 24px;
   }
 }
 
 .product__title {
+  font-size: 18px;
+  line-height: 32px;
   margin: 0;
   padding: 0;
 
@@ -136,19 +147,19 @@
 }
 
 .product__btn-wrap {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $base-black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 16px 0 0 0;
+  padding: 13px 0 0 0;
 
   @media (min-width: $tablet-width) {
     padding: 20px 0 0 0;
   }
-}
-
-.product__price {
-}
-
-.product__btn {
 }

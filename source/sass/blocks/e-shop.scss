@@ -1,6 +1,6 @@
 .e-shop {
   position: relative;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -14,13 +14,13 @@
 
 .e-shop__wrap {
   margin: 0;
-  padding: 20px 20px 28px;
+  padding: 20px 20px 26px;
   border-top: solid 2px $base-secondary;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     border-top: none;
-    max-width: 223px;
+    min-width: 222px;
   }
 
   @media (min-width: $desktop-width) {
@@ -39,15 +39,25 @@
   padding: 0;
 }
 
-.e-shop__item {
+.e-shop__link {
+  display: block;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
   padding: 20px 0 0 0;
-}
-
-.e-shop__link {
   text-decoration: none;
   color: $base-black;
+
+  &:hover {
+    color: $base-lighter;
+  }
+
+  &:focus {
+    color: $base-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }

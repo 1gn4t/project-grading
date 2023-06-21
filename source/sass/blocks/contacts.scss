@@ -1,6 +1,6 @@
 .contacts {
   position: relative;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -11,6 +11,7 @@
   padding: 0;
   flex-grow: 1;
 }
+
 .contacts__wrap {
   margin: 0;
   padding: 20px;
@@ -26,6 +27,7 @@
     min-width: 317px;
   }
 }
+
 .contacts__title {
   margin: 0;
   padding: 0;
@@ -51,6 +53,19 @@
   max-width: 260px;
   margin: 0;
   padding: 20px 0 16px 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $base-lighter;
+  }
+
+  &:focus {
+    color: $base-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .contacts__tel-wrap {
@@ -64,6 +79,18 @@
   line-height: 20px;
   color: $base-black;
   text-decoration: none;
+
+  &:hover {
+    color: $base-lighter;
+  }
+
+  &:focus {
+    color: $base-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .contacts__tel-icon {

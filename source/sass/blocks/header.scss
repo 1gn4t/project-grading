@@ -24,6 +24,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 12px 0 12px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding: 12px 0 12px 40px;
   }
 }
@@ -33,7 +37,7 @@
 }
 
 .main-header__logo-text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -58,29 +62,49 @@
   justify-content: center;
   grid-area: btn;
   justify-self: end;
-  padding: 12px 20px 12px 20px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px 0 0;
+  }
 
   @media (min-width: $desktop-width) {
-    padding: 12px 40px;
+    padding: 0 40px 0 70px;
     gap: 20px;
   }
 }
 
 .main-header__btn {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 0;
   line-height: 16px;
   text-transform: uppercase;
   background-color: $white;
   border: none;
-  padding: 0 22px;
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 100%;
+
+  &:hover {
+    fill: $base-primary;
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+    color: $base-primary;
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     font-size: 12px;
+    width: 112px;
   }
 }
 
@@ -93,12 +117,20 @@
 
 .main-header__toggle {
   display: block;
-  width: 16px;
-  height: 1px;
+  width: 60px;
+  height: 60px;
   position: relative;
-  background-color: $base-black;
+  background-color: $white;
+  background-size: 16px 1px;
   border: none;
-  margin: 0 0 0 22px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  &:active {
+    background-color: $base-secondary;
+    color: $base-primary;
+  }
 
   &::after {
     content: "";
@@ -106,9 +138,10 @@
     height: 2px;
     width: 16px;
     background-color: $base-black;
-    left: 0;
-    top: -5px;
+    left: 22px;
+    top: 24px;
     transition: ease 0.3s all;
+    box-shadow: 0 5px 0 0 $base-black;
   }
 
   &::before {
@@ -117,8 +150,8 @@
     height: 2px;
     width: 16px;
     background-color: $base-black;
-    left: 0;
-    top: 6px;
+    left: 22px;
+    top: 34px;
     transition: ease 0.3s all;
   }
 
@@ -126,13 +159,14 @@
     background-color: $white;
 
     &::after {
-      top: 0;
+      top: 30px;
       transform: rotate(-45deg);
       transition: ease 0.3s all;
+      box-shadow: none;
     }
 
     &::before {
-      top: 0;
+      top: 30px;
       transform: rotate(45deg);
       transition: ease 0.3s all;
     }

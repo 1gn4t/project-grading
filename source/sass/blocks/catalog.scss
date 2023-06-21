@@ -18,7 +18,7 @@
 }
 
 .catalog__title {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -26,21 +26,22 @@
   text-align: center;
   color: $base-black;
   margin: 0;
-  padding: 70px 0 20px 0;
+  padding: 54px 0 20px 0;
 
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 64px;
+    padding: 84px 0 20px 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: title;
-    padding: 120px 0 40px 0;
+    padding: 105px 0 40px 0;
   }
 
   &::before {
     content: "Каталог";
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -58,7 +59,7 @@
 }
 
 .catalog__pogination {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

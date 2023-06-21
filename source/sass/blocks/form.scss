@@ -1,23 +1,27 @@
 .form {
   margin: 0 auto;
-  // max-width: 320px;
 }
 
 .form__wrap {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 30px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: $base-black;
 
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+  }
+
   @media (min-width: $desktop-width) {
     grid-area: form;
     max-width: 318px;
+    justify-content: flex-start;
   }
 }
 
@@ -47,6 +51,10 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    min-width: 222px;
+  }
 }
 
 .form__milk-title {
@@ -62,20 +70,14 @@
 
 .form__milk-item {
   margin: 0;
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
 
   &--disabled {
     color: $base-grey;
     pointer-events: none;
 
-    &:checked {
-      background: radial-gradient(
-        $primary-opacity,
-        50%,
-        $primary-opacity,
-        40%,
-        transparent
-      );
+    .form__milk-item-text::before {
+      opacity: 0.2;
     }
   }
 
@@ -90,7 +92,7 @@
     border: solid 2px $base-primary;
   }
 
-  &:hover .form__milk-item-text::before {
+  &:focus .form__milk-item-text::before {
     background: radial-gradient(
       $primary-opacity,
       50%,
@@ -119,6 +121,7 @@
 
 .form__milk-item-text {
   padding-left: 10px;
+
   &::before {
     content: "";
     display: inline-block;
@@ -137,6 +140,10 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    min-width: 222px;
+  }
 }
 
 .form__country-title {
@@ -152,7 +159,7 @@
 
 .form__country-item {
   margin: 0;
-  padding: 20px 0 0 0;
+  padding: 14px 0 0 0;
 
   &:hover .form__country-flag {
     background-color: $primary-opacity;
@@ -163,7 +170,11 @@
     pointer-events: none;
 
     .form__country-flag {
-      background-color: $light-grey;
+      background: linear-gradient($light-grey 0%, $light-grey 100%);
+    }
+
+    .form__country-checkbox:checked ~ .form__country-flag::before {
+      background-color: $base-grey;
     }
   }
 }
@@ -173,7 +184,7 @@
   display: inline-block;
   width: 42px;
   height: 24px;
-  left: 0px;
+  left: 0;
   top: 5px;
   background-color: $base-grey;
   border-radius: 12px;
@@ -208,12 +219,15 @@
 .form__submit {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
   margin: 0 auto;
   padding: 0 0 36px 0;
 
   @media (min-width: $tablet-width) {
+    position: relative;
+    top: -2px;
+    left: 14px;
     flex-direction: row;
     justify-content: center;
     padding: 10px 0 44px 0;
@@ -222,6 +236,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: center;
+    gap: 30px;
     padding: 10px 0 44px 0;
   }
 }

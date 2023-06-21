@@ -51,7 +51,10 @@
   }
 
   &--catalog {
+    font-size: 14px;
+    font-weight: 400;
     padding: 8px 20px 8px 46px;
+
     &::before {
       content: "";
       width: 20px;
@@ -59,7 +62,7 @@
       position: absolute;
       top: 10px;
       left: 20px;
-      background-image: url(../../img/catalog/catalog-basket.svg);
+      background-image: url("../../img/catalog/catalog-basket.svg");
     }
   }
 }

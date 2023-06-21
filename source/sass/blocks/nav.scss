@@ -13,6 +13,7 @@
     display: block;
   }
 }
+
 .main-nav__list {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -29,21 +30,20 @@
     display: flex;
     border-bottom: none;
   }
-}
 
-.main-nav__item {
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .main-nav__link {
   display: block;
   color: $base-black;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
   border-bottom: none;
   text-align: center;
   margin: 0 auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 20px 0;
   border-top: solid 2px $base-secondary;
 
   &--current {
@@ -59,9 +59,11 @@
   &:hover {
     color: $base-primary;
   }
+
   &:focus {
     color: $base-primary;
   }
+
   &:active {
     background-color: $base-secondary;
   }

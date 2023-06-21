@@ -8,17 +8,21 @@
 
 .range__selected {
   height: 4px;
-  width: 88%;
-  left: 1%;
+  width: 76%;
+  left: 9%;
   right: 30%;
   position: absolute;
   border-radius: 5px;
   background-color: $base-lighter;
+
+  &:disabled {
+    border: solid 2px $base-grey;
+  }
 }
 
 .range__input {
   position: relative;
-  padding: 0 0 34px 0;
+  padding: 0 0 30px 0;
 }
 
 .range__input input {
@@ -30,6 +34,7 @@
   pointer-events: none;
   appearance: none;
 }
+
 .range__input input::-webkit-slider-thumb {
   position: relative;
   top: 2px;
@@ -40,7 +45,42 @@
   background-color: $white;
   pointer-events: auto;
   appearance: none;
+
+  &:hover {
+    background: radial-gradient(
+      $primary-opacity,
+      50%,
+      $primary-opacity,
+      40%,
+      transparent
+    );
+  }
+
+  &:focus {
+    background: radial-gradient(
+      $primary-opacity,
+      50%,
+      $primary-opacity,
+      40%,
+      transparent
+    );
+  }
+
+  &:active {
+    background: radial-gradient(
+      $base-primary,
+      50%,
+      $base-primary,
+      40%,
+      transparent
+    );
+  }
+
+  &:disabled {
+    border: solid 2px $base-grey;
+  }
 }
+
 .range__input input::-moz-range-thumb {
   height: 24px;
   width: 24px;
@@ -49,7 +89,42 @@
   background-color: $white;
   pointer-events: auto;
   appearance: none;
+
+  &:hover {
+    background: radial-gradient(
+      $primary-opacity,
+      50%,
+      $primary-opacity,
+      40%,
+      transparent
+    );
+  }
+
+  &:focus {
+    background: radial-gradient(
+      $primary-opacity,
+      50%,
+      $primary-opacity,
+      40%,
+      transparent
+    );
+  }
+
+  &:active {
+    background: radial-gradient(
+      $base-primary,
+      50%,
+      $base-primary,
+      40%,
+      transparent
+    );
+  }
+
+  &:disabled {
+    border: solid 2px $base-grey;
+  }
 }
+
 .range__price {
   position: relative;
   margin: 0;
@@ -67,15 +142,36 @@
     left: 48.57%;
   }
 }
+
 .range__price label {
   margin: 0 5px 0 0;
 }
+
 .range__price input {
   width: 98px;
   padding: 8px 10px;
   text-align: center;
   border: solid 2px $base-lighter;
   border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-black;
+
+  &:hover {
+    border: solid 2px $primary-darker;
+  }
+
+  &:focus {
+    border: solid 2px $primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border: solid 2px $light-grey;
+  }
 
   @media (min-width: $tablet-width) {
     width: 68px;
